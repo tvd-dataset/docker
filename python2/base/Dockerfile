@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
 #
 # The MIT License (MIT)
 #
@@ -26,9 +23,6 @@
 #
 # AUTHORS
 # Hervé BREDIN -- http://herve.niderb.fr/
-
-# BUILD-USING: docker build -t tvddataset/base .
-# RUN-USING:   docker run -v /path/to/tvd/corpus:/tvd tvddataset/base
 
 FROM ubuntu:14.04
 MAINTAINER Herve Bredin (http://herve.niderb.fr)
