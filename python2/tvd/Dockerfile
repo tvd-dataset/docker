@@ -1,8 +1,6 @@
-FROM tvddataset/tvd
+FROM tvddataset/base:python2
 MAINTAINER Hervé Bredin <bredin@limsi.fr>
 
-VOLUME /tvd
-ENTRYPOINT ["python", "-m", "tvd.create"]
-
+RUN pip install tvd
 RUN pip install TVDTheBigBangTheory
 RUN pip install TVDGameOfThrones
