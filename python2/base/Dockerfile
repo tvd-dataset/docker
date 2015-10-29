@@ -28,7 +28,7 @@ FROM ubuntu:14.04
 MAINTAINER Herve Bredin (http://herve.niderb.fr)
 
 RUN apt-get update
-RUN apt-get -y install wget software-properties-common curl
+RUN apt-get -y install wget software-properties-common curl git
 
 # add libdvdcss-dev repository
 RUN echo "# VideoLAN repository (libdvdcss)" >> /etc/apt/sources.list
@@ -56,6 +56,7 @@ RUN apt-get -y --force-yes install vobsub2srt
 
 # python stuff
 RUN apt-get -y install python-pip python-dev libxml2-dev libxslt1-dev zlib1g-dev gfortran
+RUN pip install lxml
 
 # download tesseract data in several language
 ADD https://tesseract-ocr.googlecode.com/files/tesseract-ocr-3.02.ces.tar.gz /tmp/ces.tar.gz
